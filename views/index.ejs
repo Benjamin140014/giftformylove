@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    name="viewport">
+  <!-- Primary Meta Tags -->
+  <title>Gift For My Love</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <style id="GiftBox">
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    body {
+      background-color: lightgrey;
+    }
+
+    #circle {
+      width: 214px;
+      height: 214px;
+      background-color: #FFC847;
+      border-radius: 214px;
+      position: fixed;
+      top: -50px;
+      right: -40px;
+      margin: auto;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      transform: scale(.3, .3);
+      transition: 2s all;
+      z-index: 1000;
+    }
+
+    #circle:hover {
+      box-shadow: 0 1px 8px rgba(255, 255, 255, 0.5);
+
+      cursor: pointer;
+    }
+
+    #circle:after {
+      content: "";
+      display: block;
+      border: 7px dashed white;
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+      animation: spin 30s linear infinite;
+    }
+
+    #circle:hover {
+      background-image: radial-gradient(#FFED85, #FFC847 70%);
+    }
+
+    #gift {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100px;
+      height: 125px;
+    }
+
+    #ribbon {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      transform: rotate(45deg);
+      margin: auto;
+      margin-bottom: -38px;
+      border-radius: 0 8px 0 8px;
+    }
+
+    #ribbon:before {
+      content: "";
+      height: 24px;
+      width: 100%;
+      background-color: #F04D4D;
+      display: block;
+      position: absolute;
+      top: 18px;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+      border-radius: inherit;
+    }
+
+    #ribbon:after {
+      content: "";
+      height: 100%;
+      width: 24px;
+      background-color: #F04D4D;
+      display: block;
+      margin: auto;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+      border-radius: inherit;
+    }
+
+    #giftbox {
+      position: relative;
+      margin: auto;
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      border-radius: 2px;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+    }
+
+    #giftbox:before {
+      content: "";
+      height: 24%;
+      width: 100%;
+      background-color: #F04D4D;
+      display: block;
+      position: absolute;
+      top: 38%;
+      box-shadow: inherit;
+    }
+
+    #giftbox:after {
+      content: "";
+      height: 100%;
+      width: 24%;
+      background-color: #F04D4D;
+      display: block;
+      margin: auto;
+      box-shadow: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="cover">
+    <audio id="audio" src="./media/onlylove_final.mp3" loop="loop"></audio>
+    <div id="dialogBox" class="ak" style="font-size:15px;">
+
+      # GỬI NHỮNG LỜI YÊU THƯƠNG ĐẾN CÔ GÁI MỎ CÀY BẮC CỦA ANH #
+      <br />
+      <br /> Chúc bé cả 365 ngày hạnh phúc, ngọt ngào và hãy luôn mỉm cười nhé.
+      <br /> Giữ mãi nụ cười trên môi và cùng anh xây dựng một tình yêu thật đẹp nhé.
+      <br /> Luôn tràn ngập niềm vui mỗi ngày.
+      <br /> Yêu thương bản thân nhiều hơn nữa.
+      <br /> Cuối cùng là chúc bé có một chuyến đi thật nhiều niềm vui nhé.
+      <br /><br />
+      From Hateful guy with a Huge Love
+      <br /><br />
+      BD 20-10-2022
+      <br />
+      <img id="imgB" src="./images/closebutton2.png" height="30" width="30" onclick="bk();" />
+
+    </div>
+  </div>
+  <div class="container-fluid">
+    <br />
+    <br />
+    <div id="circle" onclick="ak();">
+      <div id="gift">
+        <div id="ribbon"></div>
+        <div id="giftbox"></div>
+      </div>
+    </div>
+    <h1 class="red-text ak" style="text-align:center;font-weight:normal;font-size:50px;">Happy 20/10 For My Love</h1>
+    <h3 class=""
+      style="position:fixed;bottom:20px;margin:auto;right:30px;text-align:center;color:#FEFCD7;font-size:18px; text-shadow:#FEFCD7 0 0 30px, #FEFCD7 1px 0 1px;">
+      From : Hateful Guy</h3>
+    <br /><br />
+  </div>
+  <footer class="footer footer-inverse" style=" margin-bottom: 0;">
+    <div class="container">
+    </div>
+  </footer>
+
+  <script src="./javascripts/fireworks.js"></script>
+</body>
+
+</html>
